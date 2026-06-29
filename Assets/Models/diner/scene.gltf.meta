@@ -1,0 +1,307 @@
+fileFormatVersion: 2
+guid: f20510ccfeab5f349a1b7072719b70e2
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 715df9372183c47e389bb6e19fbc3b52, type: 3}
+  editorImportSettings:
+    generateSecondaryUVSet: 0
+  importSettings:
+    nodeNameMethod: 1
+    animationMethod: 2
+    generateMipMaps: 1
+    texturesReadable: 0
+    defaultMinFilterMode: 9729
+    defaultMagFilterMode: 9729
+    anisotropicFilterLevel: 1
+  instantiationSettings:
+    mask: -1
+    layer: 0
+    skinUpdateWhenOffscreen: 1
+    lightIntensityFactor: 1
+    sceneObjectCreation: 2
+  assetDependencies:
+  - type: 0
+    originalUri: Assets\Models\diner\scene.bin
+    assetPath: Assets\Models\diner\scene.bin
+  - type: 1
+    originalUri: Assets\Models\diner\textures\Trees_Background_baseColor.png
+    assetPath: Assets\Models\diner\textures\Trees_Background_baseColor.png
+  - type: 1
+    originalUri: Assets\Models\diner\textures\material_baseColor.png
+    assetPath: Assets\Models\diner\textures\material_baseColor.png
+  - type: 1
+    originalUri: Assets\Models\diner\textures\Paperboard_baseColor.jpeg
+    assetPath: Assets\Models\diner\textures\Paperboard_baseColor.jpeg
+  - type: 1
+    originalUri: Assets\Models\diner\textures\Cans_baseColor.png
+    assetPath: Assets\Models\diner\textures\Cans_baseColor.png
+  - type: 1
+    originalUri: Assets\Models\diner\textures\Breads_baseColor.png
+    assetPath: Assets\Models\diner\textures\Breads_baseColor.png
+  - type: 1
+    originalUri: Assets\Models\diner\textures\Metal_06_baseColor.jpeg
+    assetPath: Assets\Models\diner\textures\Metal_06_baseColor.jpeg
+  - type: 1
+    originalUri: Assets\Models\diner\textures\Bush_baseColor.png
+    assetPath: Assets\Models\diner\textures\Bush_baseColor.png
+  - type: 1
+    originalUri: Assets\Models\diner\textures\material_8_baseColor.png
+    assetPath: Assets\Models\diner\textures\material_8_baseColor.png
+  - type: 1
+    originalUri: Assets\Models\diner\textures\Metal_03_baseColor.jpeg
+    assetPath: Assets\Models\diner\textures\Metal_03_baseColor.jpeg
+  - type: 1
+    originalUri: Assets\Models\diner\textures\Leather_baseColor.jpeg
+    assetPath: Assets\Models\diner\textures\Leather_baseColor.jpeg
+  - type: 1
+    originalUri: Assets\Models\diner\textures\Metal_baseColor.jpeg
+    assetPath: Assets\Models\diner\textures\Metal_baseColor.jpeg
+  - type: 1
+    originalUri: Assets\Models\diner\textures\Metal_metallicRoughness.png
+    assetPath: Assets\Models\diner\textures\Metal_metallicRoughness.png
+  - type: 1
+    originalUri: Assets\Models\diner\textures\Coffee_machine_baseColor.jpeg
+    assetPath: Assets\Models\diner\textures\Coffee_machine_baseColor.jpeg
+  - type: 1
+    originalUri: Assets\Models\diner\textures\Wood_06_baseColor.jpeg
+    assetPath: Assets\Models\diner\textures\Wood_06_baseColor.jpeg
+  - type: 1
+    originalUri: Assets\Models\diner\textures\Concrete_01_baseColor.png
+    assetPath: Assets\Models\diner\textures\Concrete_01_baseColor.png
+  - type: 1
+    originalUri: Assets\Models\diner\textures\Wood_02_baseColor.jpeg
+    assetPath: Assets\Models\diner\textures\Wood_02_baseColor.jpeg
+  - type: 1
+    originalUri: Assets\Models\diner\textures\Plaste_baseColor.jpeg
+    assetPath: Assets\Models\diner\textures\Plaste_baseColor.jpeg
+  - type: 1
+    originalUri: Assets\Models\diner\textures\Wood_01_baseColor.jpeg
+    assetPath: Assets\Models\diner\textures\Wood_01_baseColor.jpeg
+  - type: 1
+    originalUri: Assets\Models\diner\textures\Roof_tiles_baseColor.jpeg
+    assetPath: Assets\Models\diner\textures\Roof_tiles_baseColor.jpeg
+  - type: 1
+    originalUri: Assets\Models\diner\textures\Brick_baseColor.jpeg
+    assetPath: Assets\Models\diner\textures\Brick_baseColor.jpeg
+  - type: 1
+    originalUri: Assets\Models\diner\textures\Metal_07_baseColor.jpeg
+    assetPath: Assets\Models\diner\textures\Metal_07_baseColor.jpeg
+  - type: 1
+    originalUri: Assets\Models\diner\textures\Wood_05_baseColor.jpeg
+    assetPath: Assets\Models\diner\textures\Wood_05_baseColor.jpeg
+  - type: 1
+    originalUri: Assets\Models\diner\textures\Tiles_02_baseColor.jpeg
+    assetPath: Assets\Models\diner\textures\Tiles_02_baseColor.jpeg
+  - type: 1
+    originalUri: Assets\Models\diner\textures\Metal_10_baseColor.png
+    assetPath: Assets\Models\diner\textures\Metal_10_baseColor.png
+  - type: 1
+    originalUri: Assets\Models\diner\textures\Concrete_02_baseColor.jpeg
+    assetPath: Assets\Models\diner\textures\Concrete_02_baseColor.jpeg
+  - type: 1
+    originalUri: Assets\Models\diner\textures\Concrete_03_baseColor.png
+    assetPath: Assets\Models\diner\textures\Concrete_03_baseColor.png
+  - type: 1
+    originalUri: Assets\Models\diner\textures\Marble_baseColor.jpeg
+    assetPath: Assets\Models\diner\textures\Marble_baseColor.jpeg
+  - type: 1
+    originalUri: Assets\Models\diner\textures\Plastic_baseColor.jpeg
+    assetPath: Assets\Models\diner\textures\Plastic_baseColor.jpeg
+  - type: 1
+    originalUri: Assets\Models\diner\textures\Door_baseColor.jpeg
+    assetPath: Assets\Models\diner\textures\Door_baseColor.jpeg
+  - type: 1
+    originalUri: Assets\Models\diner\textures\Door_01_baseColor.jpeg
+    assetPath: Assets\Models\diner\textures\Door_01_baseColor.jpeg
+  - type: 1
+    originalUri: Assets\Models\diner\textures\Door_02_baseColor.jpeg
+    assetPath: Assets\Models\diner\textures\Door_02_baseColor.jpeg
+  - type: 1
+    originalUri: Assets\Models\diner\textures\Wood_03_baseColor.jpeg
+    assetPath: Assets\Models\diner\textures\Wood_03_baseColor.jpeg
+  - type: 1
+    originalUri: Assets\Models\diner\textures\Wood_baseColor.jpeg
+    assetPath: Assets\Models\diner\textures\Wood_baseColor.jpeg
+  - type: 1
+    originalUri: Assets\Models\diner\textures\Dumpster_baseColor.png
+    assetPath: Assets\Models\diner\textures\Dumpster_baseColor.png
+  - type: 1
+    originalUri: Assets\Models\diner\textures\Metal_02_baseColor.jpeg
+    assetPath: Assets\Models\diner\textures\Metal_02_baseColor.jpeg
+  - type: 1
+    originalUri: Assets\Models\diner\textures\Wire_baseColor.png
+    assetPath: Assets\Models\diner\textures\Wire_baseColor.png
+  - type: 1
+    originalUri: Assets\Models\diner\textures\Fryer_baseColor.png
+    assetPath: Assets\Models\diner\textures\Fryer_baseColor.png
+  - type: 1
+    originalUri: Assets\Models\diner\textures\Garbage_bag_baseColor.png
+    assetPath: Assets\Models\diner\textures\Garbage_bag_baseColor.png
+  - type: 1
+    originalUri: Assets\Models\diner\textures\guard_rails_baseColor.jpeg
+    assetPath: Assets\Models\diner\textures\guard_rails_baseColor.jpeg
+  - type: 1
+    originalUri: Assets\Models\diner\textures\Hand_dryer_baseColor.png
+    assetPath: Assets\Models\diner\textures\Hand_dryer_baseColor.png
+  - type: 1
+    originalUri: Assets\Models\diner\textures\ketchup_baseColor.png
+    assetPath: Assets\Models\diner\textures\ketchup_baseColor.png
+  - type: 1
+    originalUri: Assets\Models\diner\textures\Mustard_baseColor.png
+    assetPath: Assets\Models\diner\textures\Mustard_baseColor.png
+  - type: 1
+    originalUri: Assets\Models\diner\textures\lemon_baseColor.png
+    assetPath: Assets\Models\diner\textures\lemon_baseColor.png
+  - type: 1
+    originalUri: Assets\Models\diner\textures\Lights_baseColor.png
+    assetPath: Assets\Models\diner\textures\Lights_baseColor.png
+  - type: 1
+    originalUri: Assets\Models\diner\textures\Lights_emissive.png
+    assetPath: Assets\Models\diner\textures\Lights_emissive.png
+  - type: 1
+    originalUri: Assets\Models\diner\textures\Lights_01_baseColor.png
+    assetPath: Assets\Models\diner\textures\Lights_01_baseColor.png
+  - type: 1
+    originalUri: Assets\Models\diner\textures\Lights_01_emissive.png
+    assetPath: Assets\Models\diner\textures\Lights_01_emissive.png
+  - type: 1
+    originalUri: Assets\Models\diner\textures\Metal_01_baseColor.jpeg
+    assetPath: Assets\Models\diner\textures\Metal_01_baseColor.jpeg
+  - type: 1
+    originalUri: Assets\Models\diner\textures\Lines_baseColor.png
+    assetPath: Assets\Models\diner\textures\Lines_baseColor.png
+  - type: 1
+    originalUri: Assets\Models\diner\textures\MENU_baseColor.jpeg
+    assetPath: Assets\Models\diner\textures\MENU_baseColor.jpeg
+  - type: 1
+    originalUri: Assets\Models\diner\textures\Grid_baseColor.png
+    assetPath: Assets\Models\diner\textures\Grid_baseColor.png
+  - type: 1
+    originalUri: Assets\Models\diner\textures\Metal_08_baseColor.jpeg
+    assetPath: Assets\Models\diner\textures\Metal_08_baseColor.jpeg
+  - type: 1
+    originalUri: Assets\Models\diner\textures\Moss_baseColor.png
+    assetPath: Assets\Models\diner\textures\Moss_baseColor.png
+  - type: 1
+    originalUri: Assets\Models\diner\textures\Napkin_Ring_baseColor.png
+    assetPath: Assets\Models\diner\textures\Napkin_Ring_baseColor.png
+  - type: 1
+    originalUri: Assets\Models\diner\textures\Oven_baseColor.png
+    assetPath: Assets\Models\diner\textures\Oven_baseColor.png
+  - type: 1
+    originalUri: Assets\Models\diner\textures\Refreshment_baseColor.png
+    assetPath: Assets\Models\diner\textures\Refreshment_baseColor.png
+  - type: 1
+    originalUri: Assets\Models\diner\textures\Refreshment_01_baseColor.png
+    assetPath: Assets\Models\diner\textures\Refreshment_01_baseColor.png
+  - type: 1
+    originalUri: Assets\Models\diner\textures\Refreshment_02_baseColor.png
+    assetPath: Assets\Models\diner\textures\Refreshment_02_baseColor.png
+  - type: 1
+    originalUri: Assets\Models\diner\textures\Refreshment_03_baseColor.png
+    assetPath: Assets\Models\diner\textures\Refreshment_03_baseColor.png
+  - type: 1
+    originalUri: Assets\Models\diner\textures\Paper_dispenser_baseColor.png
+    assetPath: Assets\Models\diner\textures\Paper_dispenser_baseColor.png
+  - type: 1
+    originalUri: Assets\Models\diner\textures\Plants_baseColor.png
+    assetPath: Assets\Models\diner\textures\Plants_baseColor.png
+  - type: 1
+    originalUri: Assets\Models\diner\textures\Plants_01_baseColor.png
+    assetPath: Assets\Models\diner\textures\Plants_01_baseColor.png
+  - type: 1
+    originalUri: Assets\Models\diner\textures\Plants_02_baseColor.png
+    assetPath: Assets\Models\diner\textures\Plants_02_baseColor.png
+  - type: 1
+    originalUri: Assets\Models\diner\textures\POPCORN_baseColor.png
+    assetPath: Assets\Models\diner\textures\POPCORN_baseColor.png
+  - type: 1
+    originalUri: Assets\Models\diner\textures\Metal_05_baseColor.jpeg
+    assetPath: Assets\Models\diner\textures\Metal_05_baseColor.jpeg
+  - type: 1
+    originalUri: Assets\Models\diner\textures\Refrigerator_baseColor.png
+    assetPath: Assets\Models\diner\textures\Refrigerator_baseColor.png
+  - type: 1
+    originalUri: Assets\Models\diner\textures\Refrigerator_01_baseColor.png
+    assetPath: Assets\Models\diner\textures\Refrigerator_01_baseColor.png
+  - type: 1
+    originalUri: Assets\Models\diner\textures\Salt_shaker_baseColor.png
+    assetPath: Assets\Models\diner\textures\Salt_shaker_baseColor.png
+  - type: 1
+    originalUri: Assets\Models\diner\textures\Sauce_baseColor.png
+    assetPath: Assets\Models\diner\textures\Sauce_baseColor.png
+  - type: 1
+    originalUri: Assets\Models\diner\textures\Armchair_baseColor.png
+    assetPath: Assets\Models\diner\textures\Armchair_baseColor.png
+  - type: 1
+    originalUri: Assets\Models\diner\textures\Grid_01_baseColor.png
+    assetPath: Assets\Models\diner\textures\Grid_01_baseColor.png
+  - type: 1
+    originalUri: Assets\Models\diner\textures\Soap_dispenser_baseColor.png
+    assetPath: Assets\Models\diner\textures\Soap_dispenser_baseColor.png
+  - type: 1
+    originalUri: Assets\Models\diner\textures\Soft_drink_dispenser_baseColor.png
+    assetPath: Assets\Models\diner\textures\Soft_drink_dispenser_baseColor.png
+  - type: 1
+    originalUri: Assets\Models\diner\textures\Stove_baseColor.png
+    assetPath: Assets\Models\diner\textures\Stove_baseColor.png
+  - type: 1
+    originalUri: Assets\Models\diner\textures\Tiles_baseColor.jpeg
+    assetPath: Assets\Models\diner\textures\Tiles_baseColor.jpeg
+  - type: 1
+    originalUri: Assets\Models\diner\textures\Tiles_01_baseColor.jpeg
+    assetPath: Assets\Models\diner\textures\Tiles_01_baseColor.jpeg
+  - type: 1
+    originalUri: Assets\Models\diner\textures\Toilet_baseColor.png
+    assetPath: Assets\Models\diner\textures\Toilet_baseColor.png
+  - type: 1
+    originalUri: Assets\Models\diner\textures\Toilet_sing_baseColor.jpeg
+    assetPath: Assets\Models\diner\textures\Toilet_sing_baseColor.jpeg
+  - type: 1
+    originalUri: Assets\Models\diner\textures\Trash_baseColor.png
+    assetPath: Assets\Models\diner\textures\Trash_baseColor.png
+  - type: 1
+    originalUri: Assets\Models\diner\textures\Wood_04_baseColor.jpeg
+    assetPath: Assets\Models\diner\textures\Wood_04_baseColor.jpeg
+  - type: 1
+    originalUri: Assets\Models\diner\textures\Plastic_01_baseColor.jpeg
+    assetPath: Assets\Models\diner\textures\Plastic_01_baseColor.jpeg
+  - type: 1
+    originalUri: Assets\Models\diner\textures\Trash_01_baseColor.png
+    assetPath: Assets\Models\diner\textures\Trash_01_baseColor.png
+  - type: 1
+    originalUri: Assets\Models\diner\textures\Tree_baseColor.png
+    assetPath: Assets\Models\diner\textures\Tree_baseColor.png
+  - type: 1
+    originalUri: Assets\Models\diner\textures\Tree_01_baseColor.png
+    assetPath: Assets\Models\diner\textures\Tree_01_baseColor.png
+  - type: 1
+    originalUri: Assets\Models\diner\textures\Vending_machine_baseColor.png
+    assetPath: Assets\Models\diner\textures\Vending_machine_baseColor.png
+  - type: 1
+    originalUri: Assets\Models\diner\textures\Vending_machine_emissive.png
+    assetPath: Assets\Models\diner\textures\Vending_machine_emissive.png
+  - type: 1
+    originalUri: Assets\Models\diner\textures\Marble_01_baseColor.png
+    assetPath: Assets\Models\diner\textures\Marble_01_baseColor.png
+  - type: 1
+    originalUri: Assets\Models\diner\textures\Sewer_baseColor.png
+    assetPath: Assets\Models\diner\textures\Sewer_baseColor.png
+  - type: 1
+    originalUri: Assets\Models\diner\textures\Asphalt_baseColor.jpeg
+    assetPath: Assets\Models\diner\textures\Asphalt_baseColor.jpeg
+  - type: 1
+    originalUri: Assets\Models\diner\textures\Asphalt_01_baseColor.jpeg
+    assetPath: Assets\Models\diner\textures\Asphalt_01_baseColor.jpeg
+  - type: 1
+    originalUri: Assets\Models\diner\textures\Asphalt_02_baseColor.jpeg
+    assetPath: Assets\Models\diner\textures\Asphalt_02_baseColor.jpeg
+  - type: 1
+    originalUri: Assets\Models\diner\textures\Grass_baseColor.jpeg
+    assetPath: Assets\Models\diner\textures\Grass_baseColor.jpeg
+  reportItems: []
