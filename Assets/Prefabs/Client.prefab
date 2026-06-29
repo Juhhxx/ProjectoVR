@@ -251,6 +251,7 @@ GameObject:
   - component: {fileID: 5981807647245620593}
   - component: {fileID: 7329773654826788854}
   - component: {fileID: -5743095168540857070}
+  - component: {fileID: 7485045451495918120}
   m_Layer: 0
   m_Name: Client
   m_TagString: Untagged
@@ -308,7 +309,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 201d87d505440c94b81085d2103f98e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ClientBrain
-  _startingState: 5
+  _startingState: 0
 --- !u!114 &5981807647245620593
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -349,4 +350,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ClientEatingBehaviour
   _minMaxEatingTime: {x: 4, y: 10}
-  _minMaxTrash: {x: 3, y: 5}
+--- !u!114 &7485045451495918120
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8393287079476760840}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7725ac7cd2e1e5d4a848af97977146cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ClientTrashBehaviour
+  _minMaxTrash: {x: 1, y: 3}

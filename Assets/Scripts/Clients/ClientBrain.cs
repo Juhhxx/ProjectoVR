@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class ClientBrain : MonoBehaviour
 {
-    public enum ClientStates { LookingForTable, LookingForSeat, Seating, Eating, Leaving, Wander, Die }
+    public enum ClientStates { LookingForTable, LookingForSeat, Seating, Eating, Trash, Leaving, Wander, Die }
 
     [SerializeField] private ClientStates _startingState = ClientStates.LookingForTable;
 
@@ -12,22 +12,28 @@ public class ClientBrain : MonoBehaviour
     private ClientMovement _clientMovement;
     private ClientWanderBehaviour _clientWander;
     private ClientEatingBehaviour _clientEating;
+    private ClientTrashBehaviour _clientTrash;
 
     private TablesManager _tablesManager;
     private Table _currentTable = null;
     private bool _noTables = false;
     private Seat _currentSeat = null;
 
+    private TrashGenerator _trashGenerator;
+
     private Vector3 _entrance;
     private bool _alive = true;
+    private bool _alreadyAte = false;
 
     private void Start()
     {
         _tablesManager = FindAnyObjectByType<TablesManager>();
+        _trashGenerator = FindAnyObjectByType<TrashGenerator>();
 
         _clientMovement = GetComponent<ClientMovement>();
         _clientWander = GetComponent<ClientWanderBehaviour>();
         _clientEating = GetComponent<ClientEatingBehaviour>();
+        _clientTrash = GetComponent<ClientTrashBehaviour>();
 
         _currentState = _startingState;
 
@@ -97,6 +103,8 @@ public class ClientBrain : MonoBehaviour
 
         _currentSeat.OccupySeat();
 
+        yield return new WaitForSeconds(0.5f);
+
         (Vector3 pos, int rot) = _currentSeat.GetSeatingPositionDirection();
 
         transform.position = pos;
@@ -111,12 +119,13 @@ public class ClientBrain : MonoBehaviour
 
     private IEnumerator Eat()
     {
-        yield return _clientEating.EatingBehaviour(_currentTable);
+        yield return _clientEating.EatingBehaviour();
 
-        _currentState = ClientStates.Leaving; 
+        _alreadyAte = true;
+        _currentState = ClientStates.Trash; 
     }
 
-    private IEnumerator Leave()
+    private IEnumerator Trash()
     {
         _clientMovement.ToggleAgent(true);
         _currentSeat.UnoccupySeat();
@@ -124,6 +133,27 @@ public class ClientBrain : MonoBehaviour
         _currentTable = null;
         _currentSeat = null;
 
+        TrashPoint trashPoint = _trashGenerator.GetAvailableTrashPoint();
+
+        if (trashPoint == null)
+        {
+            _currentState = ClientStates.Wander;
+            yield break;
+        }
+
+        bool arrived = false;
+
+        _clientMovement.SetDestination(trashPoint.Point.position, () => arrived = true);
+
+        yield return new WaitUntil(() => arrived);
+
+        yield return _clientTrash.TrashBehaviour(_trashGenerator, trashPoint);
+
+        _currentState = ClientStates.Leaving;
+    }
+
+    private IEnumerator Leave()
+    {
         bool arrivedExit = false;
 
         _clientMovement.SetDestination(_entrance, () => arrivedExit = true);
@@ -143,13 +173,13 @@ public class ClientBrain : MonoBehaviour
         _alive = false;
     }
 
-    private IEnumerator Wander()
+    private IEnumerator Wander(ClientStates nextState = ClientStates.LookingForTable)
     {
         _noTables = false;
 
         yield return _clientWander.WanderBehaviourCR();
 
-        _currentState = ClientStates.LookingForTable;
+        _currentState = nextState;
     }
 
     public IEnumerator StateMachineCR()
@@ -176,6 +206,10 @@ public class ClientBrain : MonoBehaviour
                     yield return Eat();
                     break;
                 
+                case ClientStates.Trash:
+                    yield return Trash();
+                    break;
+                
                 case ClientStates.Leaving:
                     yield return Leave();
                     break;
@@ -185,7 +219,8 @@ public class ClientBrain : MonoBehaviour
                     break;
                 
                 case ClientStates.Wander:
-                    yield return Wander();
+                    if (_alreadyAte) yield return Wander(ClientStates.Trash);
+                    else yield return Wander();
                     break;
                 
                 default:
