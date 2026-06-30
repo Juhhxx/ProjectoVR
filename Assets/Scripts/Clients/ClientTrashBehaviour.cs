@@ -16,7 +16,7 @@ public class ClientTrashBehaviour : MonoBehaviour
         for (int i = 0; i < trashProduced; i++)
         {
             trashGenerator.GenerateTrash(trashPoint);
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(1f);
         }
 
         trashPoint.IsOccupied = false;

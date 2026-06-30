@@ -6,33 +6,16 @@ public class Trash : MonoBehaviour
     [SerializeField] private TrashType _type;
     public TrashType Type => _type;
 
+    public static int TotalTrash = 0;
+
     private void Start()
     {
-        ChooseType();
+        TotalTrash++;
     }
 
-    private void ChooseType()
+    private void OnDestroy()
     {
-        _type = (TrashType)Random.Range(0, 3);
-
-        Material mat = GetComponentInChildren<MeshRenderer>().material;
-
-        if (mat == null) return;
-
-        switch (_type)
-        {
-            case TrashType.Organic:
-                mat.color = Color.darkOliveGreen;
-                break;
-            
-            case TrashType.Paper:
-                mat.color = Color.skyBlue;
-                break;
-
-            case TrashType.Plastic:
-                mat.color = Color.yellowNice;
-                break;
-        }
+        TotalTrash--;
     }
 }
 

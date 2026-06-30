@@ -3,9 +3,10 @@ using UnityEngine;
 
 public class ClientBrain : MonoBehaviour
 {
-    public enum ClientStates { LookingForTable, LookingForSeat, Seating, Eating, Trash, Leaving, Wander, Die }
+    public enum ClientStates { LookingForTable, LookingForSeat, Seating, Eating, Trash, Leaving, Wander, Sick, Die }
 
     [SerializeField] private ClientStates _startingState = ClientStates.LookingForTable;
+    [SerializeField] private float _sickChance = 0.3f;
 
     private ClientStates _currentState;
 
@@ -13,6 +14,7 @@ public class ClientBrain : MonoBehaviour
     private ClientWanderBehaviour _clientWander;
     private ClientEatingBehaviour _clientEating;
     private ClientTrashBehaviour _clientTrash;
+    private ClientSickBehaviour _clientSick;
 
     private TablesManager _tablesManager;
     private Table _currentTable = null;
@@ -34,6 +36,7 @@ public class ClientBrain : MonoBehaviour
         _clientWander = GetComponent<ClientWanderBehaviour>();
         _clientEating = GetComponent<ClientEatingBehaviour>();
         _clientTrash = GetComponent<ClientTrashBehaviour>();
+        _clientSick = GetComponent<ClientSickBehaviour>();
 
         _currentState = _startingState;
 
@@ -122,7 +125,26 @@ public class ClientBrain : MonoBehaviour
         yield return _clientEating.EatingBehaviour();
 
         _alreadyAte = true;
-        _currentState = ClientStates.Trash; 
+
+        float rnd = Random.Range(0f, 1f);
+
+        if (rnd <= _sickChance) _currentState = ClientStates.Sick;
+        else _currentState = ClientStates.Trash; 
+    }
+
+    private IEnumerator Sick()
+    {
+        _clientMovement.ToggleAgent(true);
+        _currentSeat.UnoccupySeat();
+
+        _currentTable = null;
+        _currentSeat = null;
+        
+        yield return _clientWander.WanderBehaviourCR();
+
+        yield return _clientSick.SickBehaviour();
+
+        _currentState = ClientStates.Leaving;
     }
 
     private IEnumerator Trash()
@@ -204,6 +226,10 @@ public class ClientBrain : MonoBehaviour
 
                 case ClientStates.Eating:
                     yield return Eat();
+                    break;
+                
+                case ClientStates.Sick:
+                    yield return Sick();
                     break;
                 
                 case ClientStates.Trash:

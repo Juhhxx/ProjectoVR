@@ -1,11 +1,12 @@
 using System.Collections;
+using NaughtyAttributes;
 using UnityEngine;
 
 public class ClientSpawner : MonoBehaviour
 {
     [SerializeField] private GameObject _clientPrefab;
 
-    [SerializeField, Range (0,10)] private float _spawningInterval;
+    [SerializeField, MinMaxSlider(0,15)] private Vector2 _spawningInterval;
 
     private void Start()
     {
@@ -18,7 +19,7 @@ public class ClientSpawner : MonoBehaviour
         {
             Instantiate(_clientPrefab, transform.position, Quaternion.identity);
 
-            yield return new WaitForSeconds(_spawningInterval);
+            yield return new WaitForSeconds(Random.Range(_spawningInterval.x, _spawningInterval.y));
         }
     }
 }

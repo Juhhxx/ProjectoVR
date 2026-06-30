@@ -31,7 +31,7 @@ public class ClientMovement : MonoBehaviour
         if (CheckOnArrive())
         {
             OnArrive?.Invoke();
-            Debug.Log($"Client {name} arrived at {_agent.destination}");
+            // Debug.Log($"Client {name} arrived at {_agent.destination}");
         }
     }
 }

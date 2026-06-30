@@ -3,7 +3,8 @@ using UnityEngine;
 
 public class TrashGenerator : MonoBehaviour
 {
-    [SerializeField] private GameObject _trashPrefab;
+    [SerializeField] private TrashDataBase _trashDataBase;
+    [SerializeField] private float _trashSpawnRadius = 2f;
 
     [SerializeField] private TrashPoint[] _trashPoints;
 
@@ -17,7 +18,34 @@ public class TrashGenerator : MonoBehaviour
     {
         if (trashPoint == null) return;
 
-        Instantiate(_trashPrefab, trashPoint.TrashSpawn.position, Quaternion.identity);
+        Instantiate(_trashDataBase.GetTrashPrefabFromType(ChooseType()),
+                    ChoosePosition(trashPoint.TrashSpawn.position),
+                    Quaternion.identity);
+    }
+
+    private Vector3 ChoosePosition(Vector3 origin)
+    {
+        Vector3 dir = Random.insideUnitCircle;
+        float dist = Random.Range(0, _trashSpawnRadius);
+
+        return origin + (dir * dist);
+    }
+
+    private TrashType ChooseType()
+    {
+        TrashType type = (TrashType)Random.Range(0, 3);
+
+        return type;
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.blue;
+
+        foreach (TrashPoint tp in _trashPoints)
+        {
+            Gizmos.DrawWireSphere(tp.TrashSpawn.position, _trashSpawnRadius);
+        }
     }
 }
 
