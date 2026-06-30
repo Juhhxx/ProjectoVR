@@ -5,18 +5,21 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/StartMenu.unity
     guid: f63b8ca981ca4a94fbe591c751eb55cc
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/MapTest.unity
     guid: 0ae5f04fcd2ccb641a8450e5a41e92ff
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/WinMenu.unity
     guid: 78a0388c3e116324a82ed825dc958579
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/LoseMenu.unity
     guid: afa8ff6b5cc8def4eae32deb175cd1ef
+  - enabled: 1
+    path: Assets/Scenes/MainGame.unity
+    guid: 1d528cae2f8c71244a45b0610df39404
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: bc73c00a332a6ab4db8a8e2cf13b3500, type: 2}

@@ -30,8 +30,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 4116578920000688957}
   - {fileID: 2087310702582397685}
@@ -241,6 +241,18 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3847305881526539416, guid: 2b7c395241cf54688a020e77f166e305, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3847305881526539416, guid: 2b7c395241cf54688a020e77f166e305, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3847305881526539416, guid: 2b7c395241cf54688a020e77f166e305, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3847305881526539416, guid: 2b7c395241cf54688a020e77f166e305, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.01100003
       objectReference: {fileID: 0}
@@ -280,6 +292,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3847305881526539416, guid: 2b7c395241cf54688a020e77f166e305, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4480994751173709346, guid: 2b7c395241cf54688a020e77f166e305, type: 3}
       propertyPath: m_Name
       value: Napkin_Blue
@@ -305,6 +321,18 @@ PrefabInstance:
     - target: {fileID: 3847305881526539416, guid: 2b7c395241cf54688a020e77f166e305, type: 3}
       propertyPath: m_RootOrder
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3847305881526539416, guid: 2b7c395241cf54688a020e77f166e305, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3847305881526539416, guid: 2b7c395241cf54688a020e77f166e305, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3847305881526539416, guid: 2b7c395241cf54688a020e77f166e305, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3847305881526539416, guid: 2b7c395241cf54688a020e77f166e305, type: 3}
       propertyPath: m_LocalPosition.x
@@ -346,6 +374,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3847305881526539416, guid: 2b7c395241cf54688a020e77f166e305, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4480994751173709346, guid: 2b7c395241cf54688a020e77f166e305, type: 3}
       propertyPath: m_Name
       value: Napkin_Blue (1)
@@ -375,6 +407,18 @@ PrefabInstance:
     - target: {fileID: 6791937498760542527, guid: c3112a4dc14a547e8a54d799772473fb, type: 3}
       propertyPath: m_RootOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6791937498760542527, guid: c3112a4dc14a547e8a54d799772473fb, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6791937498760542527, guid: c3112a4dc14a547e8a54d799772473fb, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6791937498760542527, guid: c3112a4dc14a547e8a54d799772473fb, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6791937498760542527, guid: c3112a4dc14a547e8a54d799772473fb, type: 3}
       propertyPath: m_LocalPosition.x
@@ -414,6 +458,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6791937498760542527, guid: c3112a4dc14a547e8a54d799772473fb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6791937498760542527, guid: c3112a4dc14a547e8a54d799772473fb, type: 3}
+      propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

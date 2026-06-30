@@ -8,7 +8,7 @@ public class ClientSpawner : MonoBehaviour
 
     [SerializeField, MinMaxSlider(0,15)] private Vector2 _spawningInterval;
 
-    private void Start()
+    public void StartSpawning()
     {
         StartCoroutine(SpawnClientsCR());
     }

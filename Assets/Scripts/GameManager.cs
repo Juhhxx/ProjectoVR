@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using NaughtyAttributes;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
@@ -30,6 +31,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject _rankPanel;
 
     [SerializeField] private Transform _playerRig;
+    [SerializeField] private Transform _startPosition;
     [SerializeField] private Transform _finalPosition;
 
     [System.Serializable]
@@ -42,9 +44,11 @@ public class GameManager : MonoBehaviour
 
     private Timer _timer;
 
-    public void Start()
+    public void StartGame()
     {
         _timer = new Timer(_roundDuration, Timer.TimerReset.Manual);
+
+        _timer.OnTimerDone += StartFinal;
 
         _cleanliness = _maxCleanliness;
         _rankingSlider.maxValue = _maxCleanliness;
@@ -52,6 +56,20 @@ public class GameManager : MonoBehaviour
         _rankingSlider.value = _cleanliness;
 
         SetTrashCans();
+
+        FindAnyObjectByType<ClientSpawner>().StartSpawning();
+
+        _playerRig.position = _startPosition.position;
+    }
+
+    public void SceneReload()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public void Quit()
+    {
+        Application.Quit();
     }
 
     private void SetTrashCans()
@@ -67,8 +85,8 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        _timer.CountTimer();
-        _timerUI.fillAmount = _timer.CurrentTime / _roundDuration;
+        _timer?.CountTimer();
+        if (_timer != null) _timerUI.fillAmount = _timer.CurrentTime / _roundDuration;
         CheckCleanliness();
         _rankingSlider.value = _cleanliness;
         _scoreText.text = _playerScore.ToString();
